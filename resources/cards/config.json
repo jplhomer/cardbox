@@ -3,11 +3,19 @@
 	"properties": {
 		"dateAdded": {
 			"name": "dateAdded",
-			"type": "number",
-			"typeLabel": "number",
-			"required": true,
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
 			"id": "dateAdded",
 			"order": 0
+		},
+		"user": {
+			"name": "user",
+			"type": "object",
+			"typeLabel": "object",
+			"required": false,
+			"id": "user",
+			"order": 1
 		},
 		"title": {
 			"name": "title",
@@ -15,7 +23,7 @@
 			"typeLabel": "string",
 			"required": true,
 			"id": "title",
-			"order": 1
+			"order": 2
 		},
 		"description": {
 			"name": "description",
@@ -23,7 +31,7 @@
 			"typeLabel": "string",
 			"required": false,
 			"id": "description",
-			"order": 2
+			"order": 3
 		}
 	}
 }

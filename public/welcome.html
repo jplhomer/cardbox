@@ -7,24 +7,28 @@
 <body>
   <div class="container">
     <h1></h1>
+
     <button class="btn" id="logout-btn">Logout</button>
   </div>
   <script type="text/javascript" src="/js/lib/jquery.js"></script>
   <script type="text/javascript" src="/dpd.js"></script>
-  <script type="text/javascript">
-    dpd.users.me(function(user) {
-      if (user) {
-        $('h1').text("Welcome, " + user.username + "!");
-      } else {
-        location.href = "/";
-      }
-    });
+  <script type="text/javascript" src="/js/script.js"></script>
 
-    $('#logout-btn').click(function() {
-      dpd.users.logout(function(res, err) {
-        location.href = "/";
-      });
-    });
-  </script>
+  <div class="container">
+    <form class="form add-card">
+      <h2>Add a card</h2>
+      <label for="title">Title:</label>
+      <input type="text" name="title" id="title" />
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" cols="40" rows="10"></textarea>
+
+      <input type="submit" class="btn btn-primary" value="Add Card" />
+    </form>
+
+    <h3>Your Cards</h3>
+
+    <div class="your-cards"></div>
+  </div>
 </body>
 </html>
